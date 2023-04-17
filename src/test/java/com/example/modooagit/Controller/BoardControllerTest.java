@@ -32,6 +32,6 @@ class BoardControllerTest {
                 MockMvcRequestBuilders.get("/api/helloWorld")
         ).andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content().string("Greetings from Spring Boot!")); //BoardController의 값과 비교
+                .andExpect(MockMvcResultMatchers.content().string("Greetings from Spring Boot!"));
     }
 }
