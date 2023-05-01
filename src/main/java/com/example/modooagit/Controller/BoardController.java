@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BoardController {
     //@RequestMapping("/test")
-    @GetMapping(value="/api/helloWorld")
+    @GetMapping(value="/")
     public String index() {
         return "Greetings from Spring Boot!";
     }
