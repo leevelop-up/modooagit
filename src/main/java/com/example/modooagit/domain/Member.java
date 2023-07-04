@@ -9,6 +9,16 @@ public class Member {
     //@Column(name = "username")
     private String name;
 
+    private String pw;
+
+    public String getPw() {
+        return pw;
+    }
+
+    public void setPw(String pw) {
+        this.pw = pw;
+    }
+
     public Long getId() {
         return id;
     }

@@ -28,6 +28,7 @@ public class MemberController {
     public String creat(MemberForm form){
         Member member = new Member();
         member.setName(form.getName());
+
         memberService.join(member);
         return "redirect:/";
     }
@@ -37,5 +38,11 @@ public class MemberController {
         List<Member> member = memberService.findMembers();
         model.addAttribute("members",member);
         return "members/memberList";
+    }
+    @GetMapping("/members/login")
+    public String login(Model model){
+        List<Member> member = memberService.findMembers();
+        model.addAttribute("members",member);
+        return "members/login";
     }
 }

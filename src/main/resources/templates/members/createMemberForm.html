@@ -2,16 +2,22 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Hello</title>
+    <link rel="stylesheet" href="/css/index.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
     <div>
         <form action="/members/new" method="post">
-            <div class="form-group">
-                <label for="name">이름</label>
-                <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+            <div id="join">
+                <h2 class="font-weight-medium">통합 회원가입</h2>
+                <div class="form-group">
+                    <label for="name"> ID</label>
+                    <input type="text" id="name" name="name" placeholder="ID를 입력하세요">
+                    <label for="name"> PW</label>
+                    <input type="text" id="PW" name="PW" placeholder="PW를 입력하세요">
+                </div>
+                <button type="submit">등록</button>
             </div>
-            <button type="submit">등록</button>
         </form>
     </div>
 </body>
