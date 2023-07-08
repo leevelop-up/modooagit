@@ -2,9 +2,6 @@ package com.example.modooagit.service;
 
 import com.example.modooagit.domain.Member;
 import com.example.modooagit.repository.MemberRepository;
-import com.example.modooagit.repository.MemoryMemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -12,7 +9,7 @@ import java.util.Optional;
 @Transactional
 public class MemberService {
 
-    private final MemberRepository memberRepository;
+    private  MemberRepository memberRepository;
 
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
@@ -38,5 +35,11 @@ public class MemberService {
 
     public Optional<Member> fineOne(Long memberId){
         return memberRepository.findById(memberId);
+    }
+
+
+    public  Member authenticate(String name, String pw) {
+        Member member = memberRepository.findByName(name).orElse(null);
+        return null;
     }
 }

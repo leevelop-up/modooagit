@@ -1,10 +1,19 @@
 package com.example.modooagit.domain;
 
+import lombok.*;
+
 import javax.persistence.*;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class Member {
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+
     private Long id;
     //@Column(name = "username")
     private String name;
